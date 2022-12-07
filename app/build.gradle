@@ -64,11 +64,13 @@ android {
             versionNameSuffix '-DEBUG'
             buildConfigField("String", "API_KEY", '"d1f2a78672d06509bd1abe333b5ee75a"')
             buildConfigField("String", "BASE_URL", '"https://api.themoviedb.org/3/"')
+            buildConfigField("String", "BASE_IMAGE_URL", '"https://image.tmdb.org/t/p/w500/"')
         }
         release {
             minifyEnabled false
             buildConfigField("String", "API_KEY", '"d1f2a78672d06509bd1abe333b5ee75a"')
             buildConfigField("String", "BASE_URL", '"https://api.themoviedb.org/3/"')
+            buildConfigField("String", "BASE_IMAGE_URL", '"https://image.tmdb.org/t/p/w500/"')
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }

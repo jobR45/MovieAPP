@@ -39,7 +39,7 @@ class DetailFragment : BaseFragment() {
 
         //For debug
         viewModel.movieId.observe(viewLifecycleOwner, Observer {
-            binding.tvDetail.text = "Detail fragment + ${it.toString()}"
+            binding.tvDetail.text = "Movie ID is  + ${it.toString()}"
         })
 
     }

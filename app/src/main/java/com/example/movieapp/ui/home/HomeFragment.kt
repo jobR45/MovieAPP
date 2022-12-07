@@ -9,11 +9,15 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.movieapp.R
 import com.example.movieapp.base.BaseFragment
 import com.example.movieapp.databinding.FragmentHomeBinding
 import com.example.movieapp.global.helper.Navigation
+import com.example.movieapp.ui.home.adapter.ListMovieAdapter
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 
 @AndroidEntryPoint
@@ -21,6 +25,11 @@ class HomeFragment : BaseFragment() {
 
     private lateinit var binding: FragmentHomeBinding
     private val viewModel: HomeViewModel by viewModels()
+
+
+    @Inject
+    lateinit var listMovieAdapter: ListMovieAdapter
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,11 +46,17 @@ class HomeFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         registerBaseObserver(viewModel)
+        registerRecycler()
 
-        //For debug only
-        binding.tvHome.setOnClickListener{
-            viewModel.actionToMovieDetail()
-        }
+    }
+
+
+
+
+    private fun registerRecycler(){
+        listMovieAdapter.viewModel = viewModel
+        binding.rvMovie.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL,false)
+        binding.rvMovie.adapter = listMovieAdapter
 
     }
     override fun navigate(navigationTo: Navigation) {

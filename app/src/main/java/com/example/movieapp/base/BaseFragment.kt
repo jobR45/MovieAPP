@@ -8,6 +8,7 @@ import com.example.movieapp.R
 import com.example.movieapp.global.helper.Navigation
 
 
+
 abstract  class BaseFragment : Fragment() {
 
     protected fun findNavController(): NavController? {
