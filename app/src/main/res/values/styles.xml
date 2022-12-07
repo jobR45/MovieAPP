@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Text Views -->
+    <style name="TextView" />
+
+    <style name="TextView.Title" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/font_24sp</item>
+    </style>
+
+    <style name="TextView.TitleMedium" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/font_16sp</item>
+    </style>
+    <style name="TextView.Small" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_18sp</item>
+    </style>
+
+
+    <!-- Buttons-->
+    <style name="Button"/>
+    <style name="Button.White" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textColor">@color/purple_200</item>
+        <item name="android:textSize">@dimen/font_20sp </item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:padding">@dimen/padding_global_5dp</item>
+        <item name="android:background">@drawable/background_border_rectangle</item>
+    </style>
+</resources>

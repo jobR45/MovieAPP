@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">MovieAPP</string>
+
+    <!-- Global values -->
+    <string name="global_error_title">Erreur </string>
+    <string name="global_error_message">Une Erreur est survenus, veuillez réessayer plus tard </string>
+    <string name="global_error">Une Erreur est survenus  </string>
+    <string name="global_error_internet">Vérifier votre connexion</string>
+    <string name="global_error_action_repeat">Réessayer</string>
+    <string name="global_ok">OK</string>
+    <string name="global_no">NO</string>
+    <string name="global_yes">Yes</string>
+    <string name="global_all">Tout</string>
+    <string name="global_search">Rechercher</string>
+    <string name="global_art">Ouvres</string>
+    <string name="global_artists">Personnes</string>
+    <string name="global_Galerie">Galerie</string>
+    <string name="global_cancel">Annuler</string>
+    <string name="global_filter">Filtrer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
 </resources>
