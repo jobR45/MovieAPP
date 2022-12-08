@@ -28,7 +28,8 @@ fun Context?.isNetworkAvailable(): Boolean {
 
 
 
-
+/**
+ * Set Recycler view's Adapter*/
 @BindingAdapter("data")
 fun <T> initializeAdapter(recyclerView: RecyclerView, data : T?){
 
@@ -41,7 +42,9 @@ fun <T> initializeAdapter(recyclerView: RecyclerView, data : T?){
 }
 
 
-
+/**
+ * Set the image and placeholder for ImageView using Glide
+ * */
 @BindingAdapter(value= ["imageUrl","placeholder","requestManager"],requireAll = true)
 fun setImage(view : ImageView, imageUrl:String?, placeHolder : Drawable, requestManager: RequestManager){
     if(!imageUrl.isNullOrEmpty()){

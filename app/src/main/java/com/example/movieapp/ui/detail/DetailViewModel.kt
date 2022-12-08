@@ -25,7 +25,7 @@ class DetailViewModel @Inject constructor(
 ) : BaseAndroidViewModel(application) {
 
 
-    /** Debug
+    /**
      *  retrieve movie Id argument from advanced Home fragment*/
     private val movieIdArg = savedStateHandle.get<Int>(ExtraKeys.MovieDetail.MOVIE_ID)
 

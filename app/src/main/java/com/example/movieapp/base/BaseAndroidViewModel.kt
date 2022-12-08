@@ -10,7 +10,7 @@ import com.example.movieapp.global.helper.Navigation
 import com.example.movieapp.global.helper.SingleLiveEvent
 import retrofit2.HttpException
 
-abstract class BaseAndroidViewModel(application: Application) : AndroidViewModel(application){
+abstract class BaseAndroidViewModel(application: Application) : AndroidViewModel(application) {
 
     //application context for resource access only
     @SuppressLint("StaticFieldLeak")
@@ -26,7 +26,7 @@ abstract class BaseAndroidViewModel(application: Application) : AndroidViewModel
      * handle throwable for text*/
 
 
-    protected fun handleThrowableText(throwable: Throwable) :String {
+    protected fun handleThrowableText(throwable: Throwable): String {
         return if (throwable is EndPointInterceptor.NetworkNotFoundException) {
             applicationContext.getString(R.string.global_error_internet)
 
@@ -34,7 +34,7 @@ abstract class BaseAndroidViewModel(application: Application) : AndroidViewModel
             when (throwable.code()) {
                 // we can handle other responses here
 
-                else ->  applicationContext.getString(R.string.global_error)
+                else -> applicationContext.getString(R.string.global_error)
             }
         } else {
             applicationContext.getString(R.string.global_error)

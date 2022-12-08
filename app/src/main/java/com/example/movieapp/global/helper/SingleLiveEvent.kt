@@ -12,7 +12,7 @@ class SingleLiveEvent<T> : MutableLiveData<T>() {
 
     /*
     *
-    extension of the MutableLiveData class that it emits the data only once whenever required.
+     This class allows us to emits the data only once whenever required.
     * this ensure  that events will trigger only once upon configuration change/screen rotation..*/
 
 

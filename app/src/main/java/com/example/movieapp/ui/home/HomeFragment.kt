@@ -60,7 +60,6 @@ class HomeFragment : BaseFragment() {
     }
 
     private fun showMoviePagination() {
-
         registerMovieAdapter()
         loadStateArtAdapter()
         observePaginationMovies()
@@ -104,7 +103,7 @@ class HomeFragment : BaseFragment() {
                 binding.progressHomeFragment.visibility = View.GONE
                 binding.tvErrorMovies.visibility = View.VISIBLE
                 binding.btnRetry.visibility = View.VISIBLE
-                // binding.swipeLayout.visibility = View.GONE
+                binding.swipeLayout.visibility = View.GONE
 
             }
             is LoadState.NotLoading -> {
@@ -112,8 +111,8 @@ class HomeFragment : BaseFragment() {
                 binding.progressHomeFragment.visibility = View.GONE
                 binding.tvErrorMovies.visibility = View.GONE
                 binding.btnRetry.visibility = View.GONE
-                //  binding.swipeLayout.visibility = View.VISIBLE
-                //  binding.swipeLayout.isRefreshing = false
+                binding.swipeLayout.visibility = View.VISIBLE
+                binding.swipeLayout.isRefreshing = false
 
             }
         }
@@ -127,10 +126,10 @@ class HomeFragment : BaseFragment() {
             moviePagingAdapter.retry()
         }
 
-       /* binding.swipeLayout.setOnRefreshListener {
-            pagingArtistsAdapter.refresh()
+        binding.swipeLayout.setOnRefreshListener {
+            moviePagingAdapter.refresh()
 
-        }*/
+        }
 
     }
 

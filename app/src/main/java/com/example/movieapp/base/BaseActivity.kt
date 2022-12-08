@@ -14,6 +14,7 @@ abstract class BaseActivity : AppCompatActivity() {
             //we can dialogs, Toasts...
         }
     }
+
     private fun registerNavigation(viewModel: BaseAndroidViewModel) {
         viewModel.navigation.observe(this) { navigate(it) }
     }

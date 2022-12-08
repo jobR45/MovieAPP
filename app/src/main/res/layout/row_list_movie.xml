@@ -16,13 +16,13 @@
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="@dimen/row_list_height"
         android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/iv_icon_movie"
-            android:layout_width="100dp"
-            android:layout_height="150dp"
+            android:layout_width="@dimen/row_image_width"
+            android:layout_height="@dimen/row_image_height"
             imageUrl="@{movie.poster_path}"
             requestManager="@{requestManager}"
             placeholder="@{@drawable/movie_placeholder}"

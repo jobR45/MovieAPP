@@ -22,7 +22,7 @@ class DetailFragment : BaseFragment() {
 
 
     private lateinit var binding: FragmentDetailBinding
-    private val viewModel : DetailViewModel by viewModels()
+    private val viewModel: DetailViewModel by viewModels()
 
     @Inject
     @Named("glideFragment")
@@ -34,7 +34,7 @@ class DetailFragment : BaseFragment() {
     ): View {
 
 
-        binding = FragmentDetailBinding.inflate(inflater,container,false)
+        binding = FragmentDetailBinding.inflate(inflater, container, false)
         binding.viewmodel = viewModel
         binding.requestManager = requestManager
         binding.lifecycleOwner = viewLifecycleOwner
