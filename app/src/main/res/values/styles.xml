@@ -12,12 +12,16 @@
 
     <style name="TextView.TitleMedium" parent="android:Widget.TextView">
         <item name="android:textColor">@color/black</item>
-        <item name="android:textStyle">bold</item>
         <item name="android:textSize">@dimen/font_16sp</item>
     </style>
     <style name="TextView.Small" parent="android:Widget.TextView">
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">@dimen/font_18sp</item>
+    </style>
+
+    <style name="TextView.Tiny" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_16sp</item>
     </style>
 
 

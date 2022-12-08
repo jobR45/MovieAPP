@@ -35,7 +35,7 @@ class HomeViewModel @Inject constructor(
     val errorMessage : LiveData<String> = loadingState.map {
         if (it is LoadingState.Error){
 
-            // fun from BaseAndroidViewModel
+            // function from BaseAndroidViewModel
             handleThrowableText(it.throwable)
         }
         else ""
