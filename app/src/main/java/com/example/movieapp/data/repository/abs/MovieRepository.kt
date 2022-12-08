@@ -7,4 +7,8 @@ interface MovieRepository {
 
     @WorkerThread
     suspend fun getAllMovies(): List<Movie>
+
+    @WorkerThread
+    suspend fun getPagingMovies(page : Int): List<Movie>
+
 }

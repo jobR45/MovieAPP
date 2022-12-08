@@ -14,13 +14,15 @@ class MovieViewHolder(
     private val requestManager: RequestManager
 ) : RecyclerView.ViewHolder(binding.root) {
 
-    fun bind(movie :Movie){
+    fun bind(movie :Movie?){
 
         //add value and click listener
         binding.movie = movie
         binding.requestManager = requestManager
         binding.root.setOnClickListener {
-            viewModel.clickItem(movie)
+            if (movie != null) {
+                viewModel.clickItem(movie)
+            }
         }
 
         binding.executePendingBindings()

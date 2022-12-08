@@ -9,6 +9,7 @@ import com.example.movieapp.data.model.MovieResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface ApiClient {
 
@@ -21,5 +22,12 @@ interface ApiClient {
 
     @GET("movie/{movie_id}?api_key=${BuildConfig.API_KEY}&language=en-US")
     suspend fun getMovieDetails(@Path("movie_id") movieId : String) : Movie
+
+
+    /**Paging function
+     * */
+    @GET("discover/movie?&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate&api_key=${BuildConfig.API_KEY}")
+    suspend fun  getPagingMovies(@Query("page") page: Int, )  :MovieResponse
+
 
 }

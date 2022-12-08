@@ -22,7 +22,6 @@
                android:id="@+id/rv_movie"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               data="@{viewModel.listMovie}"
                app:layout_constraintStart_toStartOf="parent"
                app:layout_constraintEnd_toEndOf="parent"
                app:layout_constraintEnd_toStartOf="parent"
@@ -31,7 +30,7 @@
 
 
        <ProgressBar
-           android:id="@+id/progress_second_fragment"
+           android:id="@+id/progress_home_fragment"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            app:layout_constraintStart_toStartOf="parent"
@@ -39,8 +38,7 @@
            app:layout_constraintBottom_toBottomOf="parent"
            app:layout_constraintTop_toTopOf="parent"
            android:layout_gravity="center"
-           tools:visibility="visible"
-           android:visibility="@{(viewModel.isLoading()) ? View.VISIBLE : View.INVISIBLE, default=gone}"/>
+           tools:visibility="visible" />
 
        <TextView
            android:id="@+id/tv_error_movies"
@@ -50,8 +48,6 @@
            app:layout_constraintStart_toStartOf="parent"
            app:layout_constraintTop_toBottomOf="@id/rv_movie"
            android:layout_marginTop="@dimen/margin_global_50dp"
-           android:text="@{viewModel.errorMessage}"
-           android:visibility="@{(viewModel.isError()) ? View.VISIBLE : View.INVISIBLE, default = gone}"
            app:layout_constraintEnd_toEndOf="parent"
            style="@style/TextView.Title"
            tools:visibility="visible"
@@ -63,13 +59,11 @@
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:text="@string/global_error_action_repeat"
-           android:onClick="@{()->viewModel.getAllMovies()}"
            app:layout_constraintTop_toBottomOf="@+id/tv_error_movies"
            app:layout_constraintStart_toStartOf="parent"
            app:layout_constraintEnd_toEndOf="parent"
            android:layout_marginTop="@dimen/margin_global_20dp"
            tools:visibility="visible"
-           android:visibility="@{(viewModel.isError()) ? View.VISIBLE : View.INVISIBLE, default = gone}"
            style="@style/Button.Blue"/>
 
 

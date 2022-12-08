@@ -16,5 +16,10 @@ class MovieRepositoryImpl @Inject constructor(
         return response.results
     }
 
+    override suspend fun getPagingMovies(page :Int): List<Movie> {
+        val response = apiClient.getPagingMovies(page)
+        return response.results
+    }
+
 
 }

@@ -20,7 +20,7 @@
 
 
     <!-- Home Fragment -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_error_footer">Cliquez ici pour rafraîchir ! </string>
 
 
 </resources>
