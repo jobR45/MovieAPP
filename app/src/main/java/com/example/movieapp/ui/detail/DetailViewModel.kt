@@ -29,6 +29,7 @@ class DetailViewModel @Inject constructor(
      *  retrieve movie Id argument from advanced Home fragment*/
     private val movieIdArg = savedStateHandle.get<Int>(ExtraKeys.MovieDetail.MOVIE_ID)
 
+    val movieId = MutableLiveData<String>()
     val movie = MutableLiveData<Movie>()
     val loadingState = MutableLiveData<LoadingState>()
 
@@ -54,14 +55,16 @@ class DetailViewModel @Inject constructor(
 
     init {
 
-        //if the movie id is null, it will cause a throwable and therefore it is handled
+        //for retry btn
+        movieId.value = movieIdArg.toString()
+
         getMovie(movieIdArg.toString())
 
 
     }
 
 
-    private fun getMovie(movieId: String) {
+     fun getMovie(movieId: String) {
 
         viewModelScope.launch(schedulerProvider.dispatchersUI()) {
 

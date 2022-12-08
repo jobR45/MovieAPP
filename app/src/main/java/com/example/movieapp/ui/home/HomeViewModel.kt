@@ -51,7 +51,7 @@ class HomeViewModel @Inject constructor(
         getAllMovies()
     }
 
-    private fun getAllMovies(){
+     fun getAllMovies(){
 
         viewModelScope.launch (schedulerProvider.dispatchersUI()){
 
